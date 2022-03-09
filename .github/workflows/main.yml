@@ -58,6 +58,7 @@ jobs:
           - redis:latest
           - rook/ceph:master
           - rook/ceph:v1.8.5
+          - rook/ceph:v1.8.6
           - ubuntu:latest
           - velero/velero-plugin-for-aws:latest
           - velero/velero-plugin-for-aws:v1.1.0
