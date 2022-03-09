@@ -48,7 +48,7 @@ jobs:
           - monaka/gerrit-init:3.3.9
           - monaka/gerrit:3.3.9
           - nsqio/nsq:latest
-          - openpolicyagent/gatekeeper:latest
+          - openpolicyagent/gatekeeper:dev
           - openpolicyagent/gatekeeper:v3.7.1
           - osixia/phpldapadmin:0.7.1
           - osixia/phpldapadmin:latest
