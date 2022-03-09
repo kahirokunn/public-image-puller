@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Login to GitHub Container Registry
-      run: echo "$GH_PAT" | docker login ghcr.io --username "$GITHUB_ACTOR" --password-stdin
+      run: echo "$GH_PAT" | docker login ghcr.io --username monaka --password-stdin
       env:
         CR_PAT: ${{ secrets.CR_PAT }}
     - name: Pull image
