@@ -12,7 +12,6 @@ jobs:
           - alpine:3.15
           - alpine:3.7
           - alpine:latest
-          - amazon/aws-for-fluent-bit
           - amazon/aws-for-fluent-bit:2.10.0
           - amazon/aws-for-fluent-bit:2.13.0
           - amazon/aws-for-fluent-bit:latest
@@ -25,7 +24,6 @@ jobs:
           - bitnami/metrics-server:0.5.0-debian-10-r22
           - bitnami/metrics-server:latest
           - boky/postfix:v3.4.0
-          - busybox
           - busybox:latest
           - centos:centos8
           - centos:latest
@@ -49,13 +47,11 @@ jobs:
           - k8sgerrit/git-gc:3.3.9
           - k8sgerrit/git-gc:latest
           - k8sgerrit/git-gc:v0.1-208-gdb4af54-3.3.1
-          - minio/minio
           - minio/minio:latest
           - monaka/gerrit-init:3.3.9
           - monaka/gerrit-init:latest
           - monaka/gerrit:3.3.9
           - monaka/gerrit:latest
-          - nsqio/nsq
           - nsqio/nsq:latest
           - openpolicyagent/gatekeeper:latest
           - openpolicyagent/gatekeeper:v3.7.1
