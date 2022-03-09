@@ -1,0 +1,26 @@
+name: Release
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        image:
+          - ubuntu:latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Login to GitHub Container Registry
+      run: echo "$GH_PAT" | docker login ghcr.io --username "$GITHUB_ACTOR" --password-stdin
+      env:
+        CR_PAT: ${{ secrets.CR_PAT }}
+    - name: Pull image
+      run: docker pull ${{ matrix.image }}
+    - name: Tag image
+      run: docker tag ${{ matrix.image }} ghcr.io/pizzafactory/public-image-puller/${{ matrix.image }} .
+    - name: Push image to GitHub Container Registry
+      run: docker push ghcr.io/pizzafactory/public-image-puller/${{ matrix.image }}
