@@ -12,11 +12,12 @@ jobs:
       matrix:
         image:
           - ubuntu:latest
+          - boky/postfix:v3.4.0
     steps:
       - uses: docker/login-action@v1
         with:
           registry: ghcr.io
-          username: songmu
+          username: monaka
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Pull image
         run: docker pull ${{ matrix.image }}
