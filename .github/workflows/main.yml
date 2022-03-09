@@ -21,6 +21,6 @@ jobs:
       - name: Pull image
         run: docker pull ${{ matrix.image }}
       - name: Tag image
-        run: docker tag ${{ matrix.image }} ghcr.io/pizzafactory/public-image-puller/${{ matrix.image }} .
+        run: docker tag ${{ matrix.image }} ghcr.io/pizzafactory/public-image-puller/${{ matrix.image }}
       - name: Push image to GitHub Container Registry
         run: docker push ghcr.io/pizzafactory/public-image-puller/${{ matrix.image }}
