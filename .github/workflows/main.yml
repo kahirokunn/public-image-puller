@@ -1,18 +1,84 @@
-name: Release
-
 on:
   push:
     branches: ["main"]
   workflow_dispatch:
-
+name: update-image
 jobs:
   run:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         image:
-          - ubuntu:latest
+          - alpine:3.15
+          - alpine:3.7
+          - alpine:latest
+          - amazon/aws-for-fluent-bit
+          - amazon/aws-for-fluent-bit:2.10.0
+          - amazon/aws-for-fluent-bit:2.13.0
+          - amazon/aws-for-fluent-bit:latest
+          - amazon/cloudwatch-agent:1.247347.5b250583
+          - amazon/cloudwatch-agent:latest
+          - bitnami/external-dns:0.7.6-debian-10-r25
+          - bitnami/external-dns:latest
+          - bitnami/kubectl:1.21
+          - bitnami/kubectl:latest
+          - bitnami/metrics-server:0.5.0-debian-10-r22
+          - bitnami/metrics-server:latest
           - boky/postfix:v3.4.0
+          - busybox
+          - busybox:latest
+          - centos:centos8
+          - centos:latest
+          - devopsmx/spinnaker-operator:1.20.3
+          - devopsmx/spinnaker-operator:latest
+          - docker/whalesay:latest
+          - envoyproxy/envoy:latest
+          - envoyproxy/envoy:v1.21.1
+          - fluent/fluentd-kubernetes-daemonset:latest
+          - fluent/fluentd-kubernetes-daemonset:v1.7.3-debian-cloudwatch-1.0
+          - grafana/grafana:8.2.5
+          - grafana/grafana:latest
+          - jimmidyson/configmap-reload:latest
+          - jimmidyson/configmap-reload:v0.5.0
+          - k8sgerrit/apache-git-http-backend:latest
+          - k8sgerrit/apache-git-http-backend:v0.1-208-gdb4af54-3.3.1
+          - k8sgerrit/gerrit-init:latest
+          - k8sgerrit/gerrit-init:v0.1-208-gdb4af54-3.3.1
+          - k8sgerrit/gerrit-replica:latest
+          - k8sgerrit/gerrit-replica:v0.1-208-gdb4af54-3.3.1
+          - k8sgerrit/git-gc:3.3.9
+          - k8sgerrit/git-gc:latest
+          - k8sgerrit/git-gc:v0.1-208-gdb4af54-3.3.1
+          - minio/minio
+          - minio/minio:latest
+          - monaka/gerrit-init:3.3.9
+          - monaka/gerrit-init:latest
+          - monaka/gerrit:3.3.9
+          - monaka/gerrit:latest
+          - nsqio/nsq
+          - nsqio/nsq:latest
+          - openpolicyagent/gatekeeper:latest
+          - openpolicyagent/gatekeeper:v3.7.1
+          - osixia/phpldapadmin:0.7.1
+          - osixia/phpldapadmin:latest
+          - postgres:12-alpine
+          - postgres:latest
+          - redis:6.2.4-alpine
+          - redis:latest
+          - rook/ceph:latest
+          - rook/ceph:master
+          - rook/ceph:v1.8.5
+          - ubuntu:latest
+          - velero/velero-plugin-for-aws:latest
+          - velero/velero-plugin-for-aws:v1.1.0
+          - velero/velero-plugin-for-aws:v1.3.0
+          - velero/velero-plugin-for-aws:v1.4.0
+          - velero/velero-plugin-for-csi:latest
+          - velero/velero-plugin-for-csi:v0.2.0
+          - velero/velero:latest
+          - velero/velero:v1.6.1
+          - velero/velero:v1.7.0
+          - velero/velero:v1.7.1
     steps:
       - uses: docker/login-action@v1
         with:
