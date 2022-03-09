@@ -30,9 +30,7 @@ jobs:
           - devopsmx/spinnaker-operator:1.20.3
           - devopsmx/spinnaker-operator:latest
           - docker/whalesay:latest
-          - envoyproxy/envoy:latest
           - envoyproxy/envoy:v1.21.1
-          - fluent/fluentd-kubernetes-daemonset:latest
           - fluent/fluentd-kubernetes-daemonset:v1.7.3-debian-cloudwatch-1.0
           - grafana/grafana:8.2.5
           - grafana/grafana:latest
