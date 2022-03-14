@@ -9,6 +9,8 @@ jobs:
     strategy:
       matrix:
         image:
+          - jimmidyson/configmap-reload:v0.5.0
+          - grafana/grafana:8.2.5
           - alpine:3.15
           - alpine:3.6
           - alpine:3.7
