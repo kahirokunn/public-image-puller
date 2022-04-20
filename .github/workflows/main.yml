@@ -62,6 +62,8 @@ jobs:
           - nsqio/nsq:latest
           - openpolicyagent/gatekeeper:dev
           - openpolicyagent/gatekeeper:v3.7.1
+          - openpolicyagent/gatekeeper:v3.8.0-rc.1
+          - openpolicyagent/gatekeeper:v3.8.0-rc.2
           - opsgenie/kubernetes-event-exporter:0.9
           - osixia/phpldapadmin:0.7.1
           - osixia/phpldapadmin:latest
