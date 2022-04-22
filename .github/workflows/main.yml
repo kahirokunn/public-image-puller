@@ -23,6 +23,7 @@ jobs:
           - amazon/cloudwatch-agent:1.247347.5b250583
           - amazon/cloudwatch-agent:latest
           - bitnami/external-dns:0.7.6-debian-10-r25
+          - bitnami/external-dns:0.11.0-debian-10-r27
           - bitnami/external-dns:latest
           - bitnami/kubectl:1.21
           - bitnami/kubectl:latest
