@@ -9,6 +9,7 @@ jobs:
     strategy:
       matrix:
         image:
+          - nginx:latest
           - traefik:latest
           - jimmidyson/configmap-reload:v0.5.0
           - grafana/grafana:8.2.5
