@@ -65,6 +65,7 @@ jobs:
           - openpolicyagent/gatekeeper:dev
           - openpolicyagent/gatekeeper:v3.7.1
           - openpolicyagent/gatekeeper:v3.7.2
+          - openpolicyagent/gatekeeper:v3.8.1
           - openpolicyagent/gatekeeper:v3.8.0-rc.1
           - openpolicyagent/gatekeeper:v3.8.0-rc.2
           - opsgenie/kubernetes-event-exporter:0.9
