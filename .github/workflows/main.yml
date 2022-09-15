@@ -104,6 +104,8 @@ jobs:
           - velero/velero:v1.7.1
           - velero/velero:v1.8.1
           - yauritux/busybox-curl:latest
+          - mailhog/mailhog:latest
+          - mailhog/mailhog:v1.0.1
     steps:
       - uses: docker/login-action@v1
         with:
