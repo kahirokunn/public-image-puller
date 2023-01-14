@@ -118,7 +118,7 @@ jobs:
           username: kahirokunn
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Pull image
-        run: docker pull ${{ matrix.image }}
+        run: docker pull ${{ matrix.image }} --platform arm64 --platform amd64
       - name: Tag image
         run: docker tag ${{ matrix.image }} ghcr.io/kahirokunn/public-image-puller/${{ matrix.image }}
       - name: Push image to GitHub Container Registry
